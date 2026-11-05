@@ -1,0 +1,291 @@
+:root {
+    --if-primary: #3b82f6;
+    --if-primary-dark: #1d4ed8;
+    --if-primary-light: #eff6ff;
+    --if-secondary: #64748b;
+    --if-success: #10b981;
+    --if-warning: #f59e0b;
+    --if-danger: #ef4444;
+    --if-info: #06b6d4;
+    --if-purple: #8b5cf6;
+    --if-dark: #0f172a;
+    --if-sidebar-bg: #0f172a;
+    --if-sidebar-hover: #1e293b;
+    --if-sidebar-active: #2563eb;
+    --if-body-bg: #f8fafc;
+    --if-card-bg: #ffffff;
+    --if-border: #e2e8f0;
+    --if-text-primary: #1e293b;
+    --if-text-muted: #64748b;
+}
+
+body {
+    background-color: var(--if-body-bg);
+    color: var(--if-text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sidebar */
+.app-wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.app-sidebar {
+    width: 260px;
+    background-color: var(--if-sidebar-bg);
+    color: #94a3b8;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.25s ease-in-out;
+    z-index: 1000;
+}
+
+.sidebar-brand {
+    padding: 1.25rem 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand-icon {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+}
+
+.sidebar-nav {
+    padding: 1rem 0;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.nav-section-title {
+    padding: 0.5rem 1.5rem 0.25rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.075em;
+    color: #475569;
+}
+
+.sidebar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 1.5rem;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.15s ease-in-out;
+}
+
+.sidebar-nav .nav-link:hover {
+    color: #ffffff;
+    background-color: var(--if-sidebar-hover);
+}
+
+.sidebar-nav .nav-link.active {
+    color: #ffffff;
+    background-color: var(--if-sidebar-active);
+}
+
+.sidebar-nav .nav-link i {
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* Main Content Area */
+.app-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+/* Header */
+.app-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--if-border);
+    padding: 0.85rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--if-dark);
+    margin: 0;
+}
+
+.app-content {
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+/* KPI Cards */
+.kpi-card {
+    background: #ffffff;
+    border: 1px solid var(--if-border);
+    border-radius: 12px;
+    padding: 1.35rem;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.kpi-title {
+    font-size: 0.825rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--if-text-muted);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.kpi-value {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--if-dark);
+    line-height: 1.1;
+    margin-bottom: 0.4rem;
+}
+
+.kpi-trend {
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.trend-up { color: var(--if-success); }
+.trend-down { color: var(--if-danger); }
+
+/* Chart Cards */
+.card-chart {
+    background: #ffffff;
+    border: 1px solid var(--if-border);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    margin-bottom: 1.5rem;
+}
+
+.card-chart .card-header {
+    background: transparent;
+    border-bottom: 1px solid var(--if-border);
+    padding: 1rem 1.35rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-chart .card-header h5 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--if-dark);
+}
+
+.card-chart .card-body {
+    padding: 1.35rem;
+}
+
+/* Badges & Tags */
+.badge-critical { background-color: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; }
+.badge-high { background-color: #ffedd5; color: #c2410c; border: 1px solid #fdba74; }
+.badge-medium { background-color: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
+.badge-low { background-color: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
+
+.badge-class-a { background-color: #d1fae5; color: #065f46; font-weight: 700; }
+.badge-class-b { background-color: #dbeafe; color: #1e40af; font-weight: 700; }
+.badge-class-c { background-color: #fee2e2; color: #991b1b; font-weight: 700; }
+
+/* Why-Did-This-Change Waterfall / Bar */
+.driver-bar-item {
+    margin-bottom: 0.85rem;
+}
+
+.driver-bar-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.driver-bar-bg {
+    height: 8px;
+    background: #f1f5f9;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+}
+
+.driver-bar-fill-pos {
+    background: var(--if-success);
+    height: 100%;
+}
+
+.driver-bar-fill-neg {
+    background: var(--if-danger);
+    height: 100%;
+}
+
+/* Data Quality Gauge Card */
+.quality-gauge {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Print styles */
+@media print {
+    .app-sidebar, .app-header, .btn-no-print {
+        display: none !important;
+    }
+    .app-main {
+        padding: 0 !important;
+    }
+    .card-chart, .kpi-card {
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+        break-inside: avoid;
+    }
+}
+

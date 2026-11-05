@@ -1,0 +1,15 @@
+/storage/logs/*.log
+/storage/reports/*
+/storage/temporary/*
+/storage/database/*.sqlite
+/storage/database/*.sqlite-journal
+/public/uploads/*
+!.gitkeep
+.env
+__pycache__/
+*.pyc
+node_modules/
+vendor/
+.DS_Store
+Thumbs.db
+

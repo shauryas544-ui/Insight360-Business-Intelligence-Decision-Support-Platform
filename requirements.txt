@@ -1,0 +1,8 @@
+# Optional packages if numpy/pandas/scipy/scikit-learn are used.
+# The InsightFlow Python engine includes standalone pure-Python analytics modules
+# so it runs out-of-the-box on standard Python 3.11+ without extra wheels.
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+scipy>=1.11.0
+
