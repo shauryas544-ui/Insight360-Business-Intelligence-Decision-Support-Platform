@@ -1,12 +1,23 @@
 # InsightFlow — Sales & Business Intelligence Analytics Platform
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://insightflow-analytics-1681.onrender.com)
+[![Deployment Status](https://img.shields.io/badge/Deployment-Live-success?style=for-the-badge)](https://insightflow-analytics-1681.onrender.com)
+
 [![PHP 8.2+](https://img.shields.io/badge/PHP-8.2%2B-777bb4?style=flat&logo=php&logoColor=white)](https://www.php.net/)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-3776ab?style=flat&logo=python&logoColor=white)](https://www.python.org/)
 [![Database](https://img.shields.io/badge/Database-MySQL%208+%20%7C%20SQLite%203-00618a?style=flat&logo=mysql&logoColor=white)](https://www.mysql.com/)
-[![Architecture](https://img.shields.io/badge/Architecture-Modular%20BI%20%2B%20Python%20Analytics-blue)](#architecture)
-[![License](https://img.shields.io/badge/License-Proprietary-red)](#)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat&logo=docker&logoColor=white)](https://www.docker.com/)
 
 > **InsightFlow** is an enterprise-grade Business Intelligence (BI), Data Analytics, and Decision Support Platform. It transforms raw transactional data into measurable business KPIs, advanced behavioral segmentations, predictive forecasts, operational anomaly alerts, and evidence-based strategic recommendations.
+
+---
+
+### 🌐 Live Production Demo
+* **Live App URL:** [https://insightflow-analytics-1681.onrender.com](https://insightflow-analytics-1681.onrender.com)
+* **Demo Access Credentials:**
+  * **Executive (CEO/Director):** `ceo@insightflow.com` / `Password123!`
+  * **Senior Data Analyst:** `analyst@insightflow.com` / `Password123!`
+  * **Operations Manager:** `ops@insightflow.com` / `Password123!`
 
 ---
 
