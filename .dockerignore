@@ -1,0 +1,12 @@
+.git
+.env
+storage/database/*.sqlite
+storage/database/*.sqlite-journal
+storage/logs/*.log
+storage/reports/*
+storage/temporary/*
+node_modules
+vendor
+tests
+.DS_Store
+Thumbs.db
