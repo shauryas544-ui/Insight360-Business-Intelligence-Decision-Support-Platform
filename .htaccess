@@ -1,0 +1,24 @@
+# Security: Block sensitive files (including .env, .git, etc.)
+<FilesMatch "^\.(env|git|htaccess)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Apache 2.4+ authorization syntax
+<IfModule mod_authz_core.c>
+    <FilesMatch "^\.(env|git|htaccess)">
+        Require all denied
+    </FilesMatch>
+</IfModule>
+
+# Block access to storage, database, python, config, app directly
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Prevent direct access to backend directories
+    RewriteRule ^(app|config|database|python|storage|tests)/ - [F,L,NC]
+
+    # Redirect root traffic to public/
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

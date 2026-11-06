@@ -6,6 +6,9 @@
 /public/uploads/*
 !.gitkeep
 .env
+.env.*
+.env.backup
+!.env.example
 __pycache__/
 *.pyc
 node_modules/
